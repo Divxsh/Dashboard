@@ -9,7 +9,7 @@ const Dashboard = () => {
 
   return (
     session && (
-      <div className="grid h-full min-h-screen w-screen grid-cols-1 bg-customGray xl:grid-cols-[18rem_auto] xl:p-8">
+      <div className="grid h-full min-h-screen w-screen grid-cols-1 overflow-hidden bg-customGray xl:grid-cols-[18rem_auto] xl:p-8">
         <Sidebar />
         <div className="flex flex-col gap-6 px-6 py-6 xl:ml-10 xl:gap-10">
           {/* Header */}
