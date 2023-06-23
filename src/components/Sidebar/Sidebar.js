@@ -1,10 +1,15 @@
 import sidebarItems from "@/constants/sidebar";
-import React from "react";
-import Icon from "../Icon/Icon";
+import { Icon } from "..";
 
-const Sidebar = () => {
+const Sidebar = ({ isOpen }) => {
   return (
-    <div className="hidden h-full w-full flex-col justify-between rounded-[30px] bg-black px-12 py-5 xl:flex">
+    <div
+      className={`fixed left-0 top-[4.8rem]  z-20 flex h-[calc(100%_-_75px)] w-1/2 min-w-[20rem] flex-col justify-between rounded-none bg-black px-12 py-5 transition-[transform] xl:static xl:h-full xl:w-full xl:rounded-[30px]
+       ${
+         isOpen ? "translate-x-0" : "-translate-x-[101%]"
+       } xl:min-w-0 xl:translate-x-0
+      `}
+    >
       <div className="flex flex-col">
         <h1 className="my-10 text-4xl font-bold text-white">Board.</h1>
         {sidebarItems["upMenu"].map((item, idx) => (

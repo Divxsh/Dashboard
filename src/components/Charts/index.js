@@ -1,2 +1,4 @@
-export { default as CustomPieChart } from "./CustomPieChart";
-export { default as CustomLineChart } from "./CustomLineChart";
+import { default as CustomPieChart } from "./CustomPieChart";
+import { default as CustomLineChart } from "./CustomLineChart";
+
+export { CustomLineChart, CustomPieChart };
