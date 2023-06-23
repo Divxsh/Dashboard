@@ -11,20 +11,20 @@ const Login = () => {
     Router.push("/");
   };
 
-  if (session) Router.push("/");
+  if (session) Router.push("/dashboard");
 
   return (
     <div className="h-screen w-screen bg-customGray">
       <div className=" flex h-full w-screen flex-col justify-center md:flex-row">
         {/* Left Side */}
         <div className="fixed top-0 w-full items-center justify-center bg-black md:static md:flex md:w-2/5">
-          <h1 className="md:0 p-3 font-montserrat text-2xl font-bold text-white md:text-7xl">
+          <h1 className="md:0 px-6 py-3 font-montserrat text-2xl font-bold text-white md:text-7xl">
             Board.
           </h1>
         </div>
 
         {/* Right Side */}
-        <div className="flex w-full items-center justify-center  md:w-3/5">
+        <div className="flex w-full items-center justify-center md:w-3/5">
           <div className="flex flex-col p-5">
             <h2 className="font-montserrat text-4xl font-bold">Sign In</h2>
             <p className="mt-2 font-lato">Sign in to your account</p>
@@ -74,7 +74,7 @@ const Login = () => {
                     type="password"
                     name="password"
                     id="password"
-                    className="bg-CUSTOMGRAYY rounded-[10px] py-2 pl-4 font-lato focus:bg-customGray focus:outline-0 focus:transition-[background]"
+                    className="rounded-[10px] bg-customGray py-2 pl-4 font-lato focus:bg-customGray focus:outline-0 focus:transition-[background]"
                   />
                 </div>
                 <div className="font-lato text-[#346BD5] ">

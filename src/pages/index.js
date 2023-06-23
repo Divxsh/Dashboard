@@ -1,11 +1,7 @@
-import { Dashboard } from "@/components/Dashboard";
+import { Login } from "../components";
 
 const index = () => {
-  return (
-    <div>
-      <Dashboard />
-    </div>
-  );
+  return <Login />;
 };
 
 export default index;
