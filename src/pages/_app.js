@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import { Lato, Montserrat } from "next/font/google";
+import { SessionProvider } from "next-auth/react";
 
 const lato = Lato({
   variable: "--font-lato",
@@ -15,10 +16,12 @@ const montserrat = Montserrat({
   fallback: ["system-ui", "sans-serif"],
 });
 
-export default function App({ Component, pageProps }) {
+export default function App({ Component, pageProps, session }) {
   return (
-    <main className={`${lato.variable} ${montserrat.variable}`}>
-      <Component {...pageProps} />
-    </main>
+    <SessionProvider session={session}>
+      <main className={`${lato.variable} ${montserrat.variable}`}>
+        <Component {...pageProps} />
+      </main>
+    </SessionProvider>
   );
 }

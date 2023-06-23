@@ -1,12 +1,17 @@
 import React from "react";
 import Icon from "../Icon/Icon";
 import Router from "next/router";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 const Login = () => {
+  const { data: session } = useSession();
+
   const onSubmitHandler = (e) => {
     e.preventDefault();
     Router.push("/");
   };
+
+  if (session) Router.push("/");
 
   return (
     <div className=" flex h-screen min-h-screen w-screen">
@@ -25,11 +30,14 @@ const Login = () => {
 
           {/* Buttons */}
           <div className="my-6 flex w-full flex-1 flex-wrap gap-6 md:w-auto">
-            <button className="flex w-full items-center gap-x-2.5 rounded-[10px] bg-white px-5  py-2 md:w-auto">
+            <button
+              className="flex w-full items-center gap-x-2.5 rounded-[10px] bg-white px-5  py-2 md:w-auto"
+              onClick={signIn}
+            >
               <Icon name={"google"} size={"14px"} />
-              <div className="w-full text-center font-montserrat text-xs text-[#858585] ">
+              <iv className="w-full text-center font-montserrat text-xs text-[#858585] ">
                 Sign in with Google
-              </div>
+              </iv>
             </button>
             <button className="flex w-full items-center gap-x-2.5 rounded-[10px] bg-white px-5   py-2 md:w-auto">
               <Icon name={"apple"} size={"14px"} />
