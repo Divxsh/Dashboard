@@ -14,7 +14,7 @@ const Login = () => {
   if (session) Router.push("/");
 
   return (
-    <div className="h-screen w-screen bg-[#F5F5F5]">
+    <div className="h-screen w-screen bg-customGray">
       <div className=" flex h-full w-screen flex-col justify-center md:flex-row">
         {/* Left Side */}
         <div className="fixed top-0 w-full items-center justify-center bg-black md:static md:flex md:w-2/5">
@@ -63,7 +63,7 @@ const Login = () => {
                     type="text"
                     name="email"
                     id="eamil"
-                    className="rounded-[10px] bg-[#F5F5F5] py-2 pl-4 font-lato transition-[background] focus:bg-[#EAEAEA] focus:outline-0"
+                    className="rounded-[10px] bg-customGray py-2 pl-4 font-lato transition-[background] focus:bg-customGray focus:outline-0"
                   />
                 </div>
                 <div className="flex flex-col gap-y-2.5 ">
@@ -74,7 +74,7 @@ const Login = () => {
                     type="password"
                     name="password"
                     id="password"
-                    className="rounded-[10px] bg-[#F5F5F5] py-2 pl-4 font-lato focus:bg-[#EAEAEA] focus:outline-0 focus:transition-[background]"
+                    className="bg-CUSTOMGRAYY rounded-[10px] py-2 pl-4 font-lato focus:bg-customGray focus:outline-0 focus:transition-[background]"
                   />
                 </div>
                 <div className="font-lato text-[#346BD5] ">
